@@ -8,7 +8,7 @@ export default function PopularCultureSection() {
         </div>
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-lg text-text-main">
-            O Sapo-Cururu é uma figura presente no folclore e na cultura popular brasileira. A cantiga de roda "Sapo Cururu na beira do rio" é um exemplo clássico, conhecida por gerações de crianças.
+            O Sapo-Cururu é uma figura presente no folclore e na cultura popular brasileira. A cantiga de roda &quot;Sapo Cururu na beira do rio&quot; é um exemplo clássico, conhecida por gerações de crianças.
           </p>
         </div>
         <div className="w-full max-w-4xl mx-auto my-8">
@@ -20,7 +20,7 @@ export default function PopularCultureSection() {
             className="rounded-lg shadow-lg w-full h-[25vh] md:h-[50vh]"
           ></iframe>
         </div>
-        <p className="text-center text-sm text-text-secondary">A música infantil "Sapo Cururu" da Galinha Pintadinha.</p>
+        <p className="text-center text-sm text-text-secondary">A música infantil &quot;Sapo Cururu&quot; da Galinha Pintadinha.</p>
         <div className="max-w-3xl mx-auto text-justify mt-8">
           <p className="text-lg text-text-main">
             Na literatura, o sapo é frequentemente retratado como um personagem sábio e conhecedor dos segredos da floresta. Em algumas lendas, ele é um guardião de tesouros ou um ser mágico capaz de se transformar em humano.

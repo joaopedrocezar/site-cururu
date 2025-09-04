@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import Image from 'next/image';
 
 export default function CuriositiesSection({ toadData }) {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -31,7 +32,9 @@ export default function CuriositiesSection({ toadData }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {toadData.curiosities.map((curiosity, index) => (
             <div key={index} className="bg-surface rounded-lg shadow-lg overflow-hidden flex flex-col">
-              <img src={curiosity.image} alt={curiosity.title} className="w-full h-64 object-cover"/>
+              <div className="relative w-full h-64">
+                <Image src={curiosity.image} alt={curiosity.title} fill={true} style={{ objectFit: 'cover' }}/>
+              </div>
               <div className="p-6 flex-grow flex flex-col">
                 <h3 className="text-2xl font-bold text-text-main mb-4">{curiosity.title}</h3>
                 <p className="text-text-main leading-relaxed flex-grow">{curiosity.content}</p>

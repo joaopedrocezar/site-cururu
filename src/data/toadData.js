@@ -9,11 +9,11 @@ export const toadData = {
       items: [
         { label: "Reino", value: "Animalia", description: "O Reino Animalia agrupa organismos multicelulares, eucariontes e heterotróficos. Caracterizam-se pela motilidade (em alguma fase da vida), ausência de parede celular e desenvolvimento embrionário complexo, com a formação de tecidos distintos. O Sapo-Cururu, como animal, exibe todas essas características fundamentais." },
         { label: "Filo", value: "Chordata", description: "Os cordados são animais que possuem, em alguma fase do desenvolvimento, uma notocorda (eixo de sustentação dorsal), um tubo neural dorsal oco, fendas faringianas e uma cauda pós-anal. No Sapo-Cururu, a notocorda é substituída pela coluna vertebral na fase adulta, característica que o insere no subfilo Vertebrata." },
-        { label: "Classe", value: "Amphibia", description: "A classe Amphibia inclui os vertebrados de &quot;vida dupla&quot;, que transitam entre o ambiente aquático e terrestre. Possuem pele permeável e glandular, essencial para a respiração cutânea, que complementa a respiração pulmonar. Seu ciclo de vida tipicamente inclui uma fase larval aquática (girino) com respiração branquial." },
-        { label: "Ordem", value: "Anura", description: "A ordem Anura agrupa os anfíbios sem cauda na fase adulta (&quot;a&quot; = sem, &quot;oura&quot; = cauda). Seus membros posteriores são alongados e musculosos, uma adaptação para o salto. Possuem um corpo curto, robusto e uma fusão de vértebras na região posterior da coluna (o uróstilo), que confere rigidez para a locomoção." },
-        { label: "Família", value: "Bufonidae", description: "Esta é a família dos &quot;sapos verdadeiros&quot;. Uma de suas sinapomorfias (características derivadas compartilhadas) mais marcantes é a presença de glândulas parotoides na pele, que produzem um coquetel de secreções tóxicas. Além disso, muitos bufonídeos não possuem dentes." },
-        { label: "Gênero", value: "Rhinella", description: "O gênero *Rhinella* (&quot;rhinos&quot; = nariz, em referência ao focinho proeminente de algumas espécies) agrupa diversas espécies de sapos neotropicais, anteriormente classificadas no gênero *Bufo*. São geralmente robustos, terrestres e com pele bastante verrucosa." },
-        { label: "Espécie", value: "R. marina", description: "A espécie *Rhinella marina* é o nome científico formal do Sapo-Cururu. O epíteto &quot;marina&quot; foi dado por Lineu devido a um relato equivocado de que o animal habitava ambientes marinhos, o que não é verdade. É uma das maiores e mais bem-sucedidas espécies da família Bufonidae." },
+        { label: "Classe", value: "Amphibia", description: "A classe Amphibia inclui os vertebrados de &apos;vida dupla&apos;, que transitam entre o ambiente aquático e terrestre. Possuem pele permeável e glandular, essencial para a respiração cutânea, que complementa a respiração pulmonar. Seu ciclo de vida tipicamente inclui uma fase larval aquática (girino) com respiração branquial." },
+        { label: "Ordem", value: "Anura", description: "A ordem Anura agrupa os anfíbios sem cauda na fase adulta (&apos;a&apos; = sem, &apos;oura&apos; = cauda). Seus membros posteriores são alongados e musculosos, uma adaptação para o salto. Possuem um corpo curto, robusto e uma fusão de vértebras na região posterior da coluna (o uróstilo), que confere rigidez para a locomoção." },
+        { label: "Família", value: "Bufonidae", description: "Esta é a família dos &apos;sapos verdadeiros&apos;. Uma de suas sinapomorfias (características derivadas compartilhadas) mais marcantes é a presença de glândulas parotoides na pele, que produzem um coquetel de secreções tóxicas. Além disso, muitos bufonídeos não possuem dentes." },
+        { label: "Gênero", value: "Rhinella", description: "O gênero *Rhinella* (&apos;rhinos&apos; = nariz, em referência ao focinho proeminente de algumas espécies) agrupa diversas espécies de sapos neotropicais, anteriormente classificadas no gênero *Bufo*. São geralmente robustos, terrestres e com pele bastante verrucosa." },
+        { label: "Espécie", value: "R. marina", description: "A espécie *Rhinella marina* é o nome científico formal do Sapo-Cururu. O epíteto &apos;marina&apos; foi dado por Lineu devido a um relato equivocado de que o animal habitava ambientes marinhos, o que não é verdade. É uma das maiores e mais bem-sucedidas espécies da família Bufonidae." },
       ]
     },
     {
@@ -22,7 +22,8 @@ export const toadData = {
         { 
           label: "Habitat", 
           value: "Florestas, savanas, áreas urbanas", 
-          description: "A *Rhinella marina* exibe uma plasticidade de habitat extraordinária. Nativa de uma área que se estende do Vale do Rio Grande, no Texas, até a Amazônia central, ela prospera em florestas subtropicais, pastagens, bosques e até dunas de areia. Sua adaptabilidade permitiu a colonização de ecossistemas alterados pelo homem, como jardins, pastagens e valas de drenagem, exigindo apenas acesso a corpos d&quot;água para reprodução."
+          description: "A *Rhinella marina* exibe uma plasticidade de habitat extraordinária. Nativa de uma área que se estende do Vale do Rio Grande, no Texas, até a Amazônia central, ela prospera em florestas subtropicais, pastagens, bosques e até dunas de areia. Sua adaptabilidade permitiu a colonização de ecossistemas alterados pelo homem, como jardins, pastagens e valas de drenagem, exigindo apenas acesso a corpos d&apos;água para reprodução."
+        },
         { 
           label: "Origem e Distribuição", 
           value: "Nativo das Américas, invasor global", 
@@ -41,7 +42,7 @@ export const toadData = {
         { 
           label: "Status de Conservação", 
           value: "Pouco Preocupante (LC)", 
-          description: "Classificado como &quot;Pouco Preocupante&quot; pela IUCN, o Sapo-Cururu não enfrenta risco de extinção. Pelo contrário, seu sucesso reprodutivo e adaptativo o torna uma grave ameaça à biodiversidade nos ecossistemas que invade, sendo alvo de programas de controle."
+          description: "Classificado como &apos;Pouco Preocupante&apos; pela IUCN, o Sapo-Cururu não enfrenta risco de extinção. Pelo contrário, seu sucesso reprodutivo e adaptativo o torna uma grave ameaça à biodiversidade nos ecossistemas que invade, sendo alvo de programas de controle."
         },
       ]
     }
@@ -50,7 +51,7 @@ export const toadData = {
   curiosities: [
     {
       title: "Evolução em Tempo Real",
-      content: "Na Austrália, cientistas observaram uma &quot;evolução rápida&quot; no Sapo-Cururu. Indivíduos na vanguarda da expansão desenvolveram pernas traseiras mais longas, permitindo que se movam mais rápido e colonizem novos territórios a uma velocidade crescente. Este traço, no entanto, veio com o custo de uma maior incidência de artrite espinhal.",
+      content: "Na Austrália, cientistas observaram uma &apos;evolução rápida&apos; no Sapo-Cururu. Indivíduos na vanguarda da expansão desenvolveram pernas traseiras mais longas, permitindo que se movam mais rápido e colonizem novos territórios a uma velocidade crescente. Este traço, no entanto, veio com o custo de uma maior incidência de artrite espinhal.",
       image: "/images/Rhinella-icterica.jpg",
     },
     {

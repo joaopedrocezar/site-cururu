@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function GallerySection({ toadData }) {
   return (
     <section className="py-20 md:py-28 bg-background">
@@ -6,7 +8,9 @@ export default function GallerySection({ toadData }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {toadData.gallery.map((image, index) => (
             <div key={index} className="group overflow-hidden rounded-lg shadow-lg scroll-animate" style={{ animationDelay: `${index * 100}ms` }}>
-              <img src={image} alt={`Imagem da galeria ${index + 1}`} className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"/>
+              <div className="relative w-full h-full">
+                <Image src={image} alt={`Imagem da galeria ${index + 1}`} fill={true} style={{ objectFit: 'cover' }} className="transition-transform duration-500 ease-in-out group-hover:scale-110"/>
+              </div>
             </div>
           ))}
         </div>

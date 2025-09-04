@@ -74,7 +74,7 @@ export const toadData = {
   gallery: [
     "/images/cururuAustralia.webp",
     "/images/sapoNaMao.jpg",
-    "/images/cururuum.jpg",
+    "/images/cururuFrog.jpg",
     "/images/cururudois.jpg",
     "/images/cururutres.jpg",
     "/images/cururuquatro.jpg"

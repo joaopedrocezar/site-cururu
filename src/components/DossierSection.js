@@ -1,33 +1,6 @@
 
 import { useState } from 'react';
 
-// Função utilitária para destacar nomes científicos
-function highlightScientificNames(text) {
-  if (!text) return text;
-  // Lista de nomes científicos a destacar
-  const names = [
-    'Rhinella marina',
-    'Rhinella',
-    'Bufo',
-    'Tropidonophis mairii',
-    'Amphibia',
-    'Anura',
-    'Bufonidae',
-    'Chordata',
-    'Animalia',
-    'R. marina',
-  ];
-  let result = text;
-  names.forEach(name => {
-    // Regex para pegar nomes entre *asteriscos* ou sozinhos
-    const regex = new RegExp(`(\\*?)(${name.replace('.', '\\.')})(\\*?)`, 'g');
-    result = result.replace(regex, (_, pre, match, post) => {
-      return `<span class=\"italic underline\">${match}</span>`;
-    });
-  });
-  return result;
-}
-
 export default function DossierSection({ toadData }) {
   const [activeCategory, setActiveCategory] = useState(toadData.dossier[0]);
   const [activeItem, setActiveItem] = useState(toadData.dossier[0].items[0]);
@@ -93,9 +66,9 @@ export default function DossierSection({ toadData }) {
 
             {/* Descrição do Item */}
             <div className="w-full lg:w-2/3 px-6 py-8">
-              <h3 className="text-2xl font-bold text-text-main mb-2" dangerouslySetInnerHTML={{__html: highlightScientificNames(activeItem.label)}} />
-              {activeItem.value && <p className="text-lg text-secondary mb-4 font-semibold" dangerouslySetInnerHTML={{__html: highlightScientificNames(activeItem.value)}} />}
-              <p className="text-text-main leading-relaxed text-justify" dangerouslySetInnerHTML={{__html: highlightScientificNames(activeItem.description)}} />
+              <h3 className="text-2xl font-bold text-text-main mb-2">{activeItem.label}</h3>
+              {activeItem.value && <p className="text-lg text-secondary mb-4 font-semibold" dangerouslySetInnerHTML={{__html: activeItem.value}} />}
+              <p className="text-text-main leading-relaxed text-justify" dangerouslySetInnerHTML={{__html: activeItem.description}} />
             </div>
           </div>
         </div>

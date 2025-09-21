@@ -9,18 +9,18 @@ function highlightScientificNames(text) {
     'Amphibia',
     'Anura',
     'Bufonidae',
-    'Bufonidae.',
     'Chordata',
     'Animalia',
     'R. marina',
     'bufotoxina',
   ];
   let result = text;
+  result = result.replace(/<em>Bufo<\/em>nidae/g, '<span class="italic underline">Bufonidae</span>');
+  result = result.replace(/<i>Bufo<\/i>nidae/g, '<span class="italic underline">Bufonidae</span>');
   names.forEach(name => {
-    const regex = new RegExp(`(\\*?)(${name.replace('.', '\\.')})(\\*?)`, 'g');
-    result = result.replace(regex, (_, pre, match, post) => {
-      return `<span class=\\"italic underline\\">${match}</span>`;
-    });
+    result = result.replace(new RegExp(`(<em>|<i>)(${name})(</em>|</i>)`, 'gi'), `<span class=\"italic underline\">${name}</span>`);
+    result = result.replace(new RegExp(`\\*${name}\\*`, 'gi'), `<span class=\"italic underline\">${name}</span>`);
+    result = result.replace(new RegExp(`\b${name}\b`, 'gi'), `<span class=\"italic underline\">${name}</span>`);
   });
   return result;
 }

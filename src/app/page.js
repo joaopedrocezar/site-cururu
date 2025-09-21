@@ -80,7 +80,7 @@ export default function SapoCururuSite() {
       </main>
 
       <footer className="bg-surface/50 py-10 text-center">
-        <p className="text-text-secondary">Dossiê Biológico: Rhinella marina</p>
+        <p className="text-text-secondary">Dossiê Biológico: <span className="italic underline">Rhinella marina</span></p>
       </footer>
     </div>
   );

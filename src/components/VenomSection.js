@@ -1,3 +1,30 @@
+// Função utilitária para destacar nomes científicos
+function highlightScientificNames(text) {
+  if (!text) return text;
+  const names = [
+    'Rhinella marina',
+    'Rhinella',
+    'Bufo',
+    'Tropidonophis mairii',
+    'Amphibia',
+    'Anura',
+    'Bufonidae',
+    'Bufonidae.',
+    'Chordata',
+    'Animalia',
+    'R. marina',
+    'bufotoxina',
+  ];
+  let result = text;
+  names.forEach(name => {
+    const regex = new RegExp(`(\\*?)(${name.replace('.', '\\.')})(\\*?)`, 'g');
+    result = result.replace(regex, (_, pre, match, post) => {
+      return `<span class=\\"italic underline\\">${match}</span>`;
+    });
+  });
+  return result;
+}
+
 export default function VenomSection() {
   return (
     <section className="py-20 md:py-28 bg-background">
@@ -9,18 +36,12 @@ export default function VenomSection() {
             </svg>
           </div>
           <h2 className="text-3xl md:text-4xl font-extrabold text-gradient">O Veneno do Cururu</h2>
-          <p className="mt-4 text-lg text-text-secondary">Uma análise da poderosa bufotoxina.</p>
+          <p className="mt-4 text-lg text-text-secondary" dangerouslySetInnerHTML={{__html: highlightScientificNames('Uma análise da poderosa bufotoxina.')}} />
         </div>
         <div className="prose prose-invert max-w-none mx-auto text-text-main">
-          <p>
-            O Sapo-Cururu é famoso por seu veneno potente, a bufotoxina. Essa substância leitosa é secretada por grandes glândulas parotoides localizadas atrás dos olhos do sapo. Quando ameaçado, o sapo pode esguichar o veneno a uma distância considerável.
-          </p>
-          <p>
-            A bufotoxina é um coquetel complexo de mais de 100 compostos, incluindo bufadienolídeos, que são semelhantes aos digitálicos usados em medicamentos para o coração. Esses compostos podem causar parada cardíaca em predadores que tentam comer o sapo.
-          </p>
-          <p>
-            Além dos bufadienolídeos, o veneno também contém aminas biogênicas, como a serotonina, que causam alucinações e outros efeitos neurológicos. Essa defesa química é tão eficaz que até mesmo os ovos e girinos do Sapo-Cururu são tóxicos.
-          </p>
+          <p dangerouslySetInnerHTML={{__html: highlightScientificNames('O Sapo-Cururu é famoso por seu veneno potente, a bufotoxina. Essa substância leitosa é secretada por grandes glândulas parotoides localizadas atrás dos olhos do sapo. Quando ameaçado, o sapo pode esguichar o veneno a uma distância considerável.')}} />
+          <p dangerouslySetInnerHTML={{__html: highlightScientificNames('A bufotoxina é um coquetel complexo de mais de 100 compostos, incluindo bufadienolídeos, que são semelhantes aos digitálicos usados em medicamentos para o coração. Esses compostos podem causar parada cardíaca em predadores que tentam comer o sapo.')}} />
+          <p dangerouslySetInnerHTML={{__html: highlightScientificNames('Além dos bufadienolídeos, o veneno também contém aminas biogênicas, como a serotonina, que causam alucinações e outros efeitos neurológicos. Essa defesa química é tão eficaz que até mesmo os ovos e girinos do Sapo-Cururu são tóxicos.')}} />
         </div>
       </div>
     </section>

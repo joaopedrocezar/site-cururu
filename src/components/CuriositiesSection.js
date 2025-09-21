@@ -1,5 +1,34 @@
+
 import { useState, useRef } from 'react';
 import Image from 'next/image';
+
+// Função utilitária para destacar nomes científicos
+function highlightScientificNames(text) {
+  if (!text) return text;
+  const names = [
+    'Rhinella marina',
+    'Rhinella',
+    'Bufo',
+    'Tropidonophis mairii',
+    'Amphibia',
+    'Anura',
+    'Bufonidae',
+    'Bufonidae.',
+    'Chordata',
+    'Animalia',
+    'R. marina',
+    'bufotoxina',
+  ];
+  let result = text;
+  names.forEach(name => {
+    // Permite pegar nomes com ponto final
+    const regex = new RegExp(`(\\*?)(${name.replace('.', '\\.')})(\\*?)`, 'g');
+    result = result.replace(regex, (_, pre, match, post) => {
+      return `<span class=\\"italic underline\\">${match}</span>`;
+    });
+  });
+  return result;
+}
 
 export default function CuriositiesSection({ toadData }) {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -37,7 +66,7 @@ export default function CuriositiesSection({ toadData }) {
               </div>
               <div className="p-6 flex-grow flex flex-col">
                 <h3 className="text-2xl font-bold text-text-main mb-4">{curiosity.title}</h3>
-                <p className="text-text-main leading-relaxed flex-grow">{curiosity.content}</p>
+                <p className="text-text-main leading-relaxed flex-grow" dangerouslySetInnerHTML={{__html: highlightScientificNames(curiosity.content)}} />
               </div>
             </div>
           ))}

@@ -10,7 +10,7 @@ export default function HeroSection({ toadData }) {
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-text-main leading-tight mt-2">
           Sapo-Cururu
         </h1>
-        <p className="text-xl md:text-2xl mt-4 text-text-main italic">{toadData.scientificName}</p>
+  <p className="text-xl md:text-2xl mt-4 text-text-main italic underline">{toadData.scientificName}</p>
       </div>
     </header>
   );

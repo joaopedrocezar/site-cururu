@@ -1,3 +1,30 @@
+// Função utilitária para destacar nomes científicos
+function highlightScientificNames(text) {
+  if (!text) return text;
+  const names = [
+    'Rhinella marina',
+    'Rhinella',
+    'Bufo',
+    'Tropidonophis mairii',
+    'Amphibia',
+    'Anura',
+    'Bufonidae',
+    'Bufonidae.',
+    'Chordata',
+    'Animalia',
+    'R. marina',
+    'bufotoxina',
+  ];
+  let result = text;
+  names.forEach(name => {
+    const regex = new RegExp(`(\\*?)(${name.replace('.', '\\.')})(\\*?)`, 'g');
+    result = result.replace(regex, (_, pre, match, post) => {
+      return `<span class=\\"italic underline\\">${match}</span>`;
+    });
+  });
+  return result;
+}
+
 export default function InvasiveSpeciesSection() {
   return (
     <section className="py-20 md:py-28 bg-surface/50">
@@ -9,18 +36,12 @@ export default function InvasiveSpeciesSection() {
             </svg>
           </div>
           <h2 className="text-3xl md:text-4xl font-extrabold text-gradient">Espécie Invasora</h2>
-          <p className="mt-4 text-lg text-text-secondary">O impacto global da *Rhinella marina*.</p>
+          <p className="mt-4 text-lg text-text-secondary" dangerouslySetInnerHTML={{__html: highlightScientificNames('O impacto global da *Rhinella marina*.')}} />
         </div>
         <div className="prose prose-invert max-w-none mx-auto text-text-main">
-          <p>
-            Apesar de ser nativo das Américas, o Sapo-Cururu foi introduzido em mais de 40 países como um agente de controle biológico de pragas na agricultura. No entanto, a iniciativa falhou e o sapo tornou-se uma das espécies invasoras mais prejudiciais do planeta.
-          </p>
-          <p>
-            Na Austrália, a introdução do Sapo-Cururu em 1935 para controlar um besouro de cana-de-açúcar é um exemplo clássico de desastre ecológico. Os sapos não apenas não controlaram a praga, como também se espalharam por todo o país, causando um declínio devastador nas populações de predadores nativos, como cobras, lagartos e marsupiais, que morrem ao tentar comer os sapos venenosos.
-          </p>
-          <p>
-            O sucesso do Sapo-Cururu como invasor se deve à sua alta fecundidade, dieta generalista e defesas químicas potentes. Programas de controle e erradicação foram implementados em vários países, mas a tarefa é extremamente difícil e cara.
-          </p>
+          <p dangerouslySetInnerHTML={{__html: highlightScientificNames('Apesar de ser nativo das Américas, o Sapo-Cururu foi introduzido em mais de 40 países como um agente de controle biológico de pragas na agricultura. No entanto, a iniciativa falhou e o sapo tornou-se uma das espécies invasoras mais prejudiciais do planeta.')}} />
+          <p dangerouslySetInnerHTML={{__html: highlightScientificNames('Na Austrália, a introdução do Sapo-Cururu em 1935 para controlar um besouro de cana-de-açúcar é um exemplo clássico de desastre ecológico. Os sapos não apenas não controlaram a praga, como também se espalharam por todo o país, causando um declínio devastador nas populações de predadores nativos, como cobras, lagartos e marsupiais, que morrem ao tentar comer os sapos venenosos.')}} />
+          <p dangerouslySetInnerHTML={{__html: highlightScientificNames('O sucesso do Sapo-Cururu como invasor se deve à sua alta fecundidade, dieta generalista e defesas químicas potentes. Programas de controle e erradicação foram implementados em vários países, mas a tarefa é extremamente difícil e cara.')}} />
         </div>
       </div>
     </section>

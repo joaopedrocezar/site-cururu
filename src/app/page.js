@@ -80,7 +80,8 @@ export default function SapoCururuSite() {
       </main>
 
       <footer className="bg-surface/50 py-10 text-center">
-        <p className="text-text-secondary">Dossiê Biológico: <span className="italic underline">Rhinella marina</span></p>
+        <p className="text-text-secondary mb-2">Dossiê Biológico: <span className="italic underline">Rhinella marina</span></p>
+        <p className="text-xs text-text-secondary">Site desenvolvido por: <span className="font-semibold">João Pedro Cezar</span>, <span className="font-semibold">Rafael Augusto</span>, <span className="font-semibold">Michel Mian</span>, <span className="font-semibold">Gustavo de Barros</span> e <span className="font-semibold">Nicolas Rafael</span></p>
       </footer>
     </div>
   );

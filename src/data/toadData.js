@@ -22,7 +22,7 @@ export const toadData = {
         {
           label: "Habitat",
           value: "Florestas, savanas, áreas urbanas",
-          description: "A *Rhinella marina* exibe uma plasticidade de habitat extraordinária. Nativa de uma área que se estende do Vale do Rio Grande, no Texas, até a Amazônia central, ela prospera em florestas subtropicais, pastagens, bosques e até dunas de areia. Sua adaptabilidade permitiu a colonização de ecossistemas alterados pelo homem, como jardins, pastagens e valas de drenagem, exigindo apenas acesso a corpos d'água para reprodução."
+          description: "A espécie exibe uma plasticidade de habitat extraordinária. Nativa de uma área que se estende do Vale do Rio Grande, no Texas, até a Amazônia central, ela prospera em florestas subtropicais, pastagens, bosques e até dunas de areia. Sua adaptabilidade permitiu a colonização de ecossistemas alterados pelo homem, como jardins, pastagens e valas de drenagem, exigindo apenas acesso a corpos d'água para reprodução."
         },
         {
           label: "Origem e Distribuição",

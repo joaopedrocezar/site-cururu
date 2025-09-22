@@ -10,7 +10,7 @@ export default function DossierSection({ toadData }) {
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-16 scroll-animate">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gradient">Dossiê Biológico</h2>
-          <p className="mt-4 text-lg text-text-secondary">Uma análise aprofundada da Rhinella marina.</p>
+          <p className="mt-4 text-lg text-text-secondary">Uma análise aprofundada da espécie.</p>
         </div>
 
         <div className="bg-surface rounded-lg shadow-lg flex flex-col lg:flex-row min-h-[600px]">
